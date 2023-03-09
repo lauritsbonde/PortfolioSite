@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState, SetStateAction } from 'react';
+import React, { FC, useEffect, useState, useCallback } from 'react';
 import skills from './skills';
 import { Box, Button } from '@mui/material';
 import SkillPill from './SkillPill';
@@ -12,6 +12,13 @@ interface SkillContainerProps {
 const SkillContainer: FC<SkillContainerProps> = ({ isMobile, colorMap, setColorMap }) => {
 	const [skillTypes, setSkillTypes] = useState<Set<string>>(new Set());
 	const [selectedType, setSelectedType] = useState<string>('All');
+
+	const updateColorMap = useCallback(
+		(colorMap: Map<string, string>) => {
+			setColorMap(colorMap);
+		},
+		[setColorMap]
+	);
 
 	useEffect(() => {
 		const types = new Set<string>();
@@ -34,7 +41,7 @@ const SkillContainer: FC<SkillContainerProps> = ({ isMobile, colorMap, setColorM
 			colors.set(type, color);
 		});
 		setSkillTypes(types);
-		setColorMap(colors);
+		updateColorMap(colors);
 	}, []);
 
 	const handleCategoryClick = (type: string) => {
