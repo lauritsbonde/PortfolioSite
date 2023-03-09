@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/PortfolioSite/static/css/main.c3c64124.css",
-    "main.js": "/PortfolioSite/static/js/main.3bda7b55.js",
+    "main.js": "/PortfolioSite/static/js/main.ae6b9781.js",
     "static/js/787.1ed0c42c.chunk.js": "/PortfolioSite/static/js/787.1ed0c42c.chunk.js",
     "static/media/satlasNews.png": "/PortfolioSite/static/media/satlasNews.1e05f66bac33685f4bc1.png",
     "static/media/multiminer.png": "/PortfolioSite/static/media/multiminer.f514a8d8261119936ce8.png",
@@ -11,11 +11,11 @@
     "static/media/background.svg": "/PortfolioSite/static/media/background.9d8fe4ca5277e887012c3373f47d157b.svg",
     "index.html": "/PortfolioSite/index.html",
     "main.c3c64124.css.map": "/PortfolioSite/static/css/main.c3c64124.css.map",
-    "main.3bda7b55.js.map": "/PortfolioSite/static/js/main.3bda7b55.js.map",
+    "main.ae6b9781.js.map": "/PortfolioSite/static/js/main.ae6b9781.js.map",
     "787.1ed0c42c.chunk.js.map": "/PortfolioSite/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c3c64124.css",
-    "static/js/main.3bda7b55.js"
+    "static/js/main.ae6b9781.js"
   ]
 }
