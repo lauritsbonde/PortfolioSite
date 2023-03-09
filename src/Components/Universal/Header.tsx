@@ -7,6 +7,8 @@ import PhoneIcon from '@mui/icons-material/Phone';
 
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 
+import Laurits from '../../Images/Laurits.png';
+
 interface HeaderProps {
 	isMobile: boolean;
 	gotoSection: (section: RefObject<HTMLElement>) => void;
@@ -127,7 +129,7 @@ const Header: FC<HeaderProps> = ({ isMobile, gotoSection, refs }) => {
 	return (
 		<AppBar sx={style.container}>
 			<Box sx={style.nameAndImg}>
-				<Avatar sx={{ backgroundColor: 'green' }}>N</Avatar>
+				<Avatar alt="Laurits Bonde" src={Laurits} sx={{ backgroundColor: 'orange', width: '42px', height: '42px' }} />
 				<HeaderTypography variant="h2" styling={{ marginLeft: '10px' }} text="Laurits Bonde" section={refs[0]} />
 			</Box>
 			{isMobile ? mobileMenu : fullSizeMenu}

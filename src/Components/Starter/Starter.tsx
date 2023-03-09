@@ -6,9 +6,10 @@ import ScrollIcon from './ScrollIcon';
 interface StarterProps {
 	isMobile: boolean;
 	componentRef: RefObject<HTMLDivElement>;
+	gotoSegment: () => void;
 }
 
-const Starter: FC<StarterProps> = ({ isMobile, componentRef }) => {
+const Starter: FC<StarterProps> = ({ isMobile, componentRef, gotoSegment }) => {
 	const style = {
 		container: {
 			width: '100vw',
@@ -60,7 +61,7 @@ const Starter: FC<StarterProps> = ({ isMobile, componentRef }) => {
 			<Typography variant="body1" sx={isMobile ? style.mobileSubText : style.subText}>
 				I am a fullstack developer with a passion for creating beautiful and functional web applications.
 			</Typography>
-			<Button variant="contained" color="primary" sx={style.button}>
+			<Button variant="contained" color="primary" sx={style.button} onClick={gotoSegment}>
 				See my work
 			</Button>
 			<ScrollIcon isMobile={isMobile} />

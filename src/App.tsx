@@ -54,7 +54,7 @@ function App() {
 		<MuiThemeProvider>
 			<Header isMobile={isMobile} gotoSection={gotoSegment} refs={[starterRef, aboutRef, projectsRef, schoolCoursesRef, contactRef]} />
 			<Links isMobile={isMobile} />
-			<Starter isMobile={isMobile} componentRef={starterRef} />
+			<Starter isMobile={isMobile} componentRef={starterRef} gotoSegment={() => gotoSegment(projectsRef)} />
 			<About isMobile={isMobile} colorMap={skillColorMap} setColorMap={updateColorMap} componentRef={aboutRef} />
 			<Projects isMobile={isMobile} colorMap={skillColorMap} componentRef={projectsRef} />
 			<SchoolCourses isMobile={isMobile} colorMap={skillColorMap} componentRef={schoolCoursesRef} />
