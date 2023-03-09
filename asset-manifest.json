@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c3c64124.css",
+    "main.js": "/static/js/main.a66caedd.js",
+    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/satlasNews.png": "/static/media/satlasNews.1e05f66bac33685f4bc1.png",
+    "static/media/multiminer.png": "/static/media/multiminer.f514a8d8261119936ce8.png",
+    "static/media/piEstimation.png": "/static/media/piEstimation.99c3b9061af202cdbafe.png",
+    "static/media/sudoku.png": "/static/media/sudoku.ce60585b517849f7c781.png",
+    "static/media/background.svg": "/static/media/background.9d8fe4ca5277e887012c3373f47d157b.svg",
+    "index.html": "/index.html",
+    "main.c3c64124.css.map": "/static/css/main.c3c64124.css.map",
+    "main.a66caedd.js.map": "/static/js/main.a66caedd.js.map",
+    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c3c64124.css",
+    "static/js/main.a66caedd.js"
+  ]
+}
