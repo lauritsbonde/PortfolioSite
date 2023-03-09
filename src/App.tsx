@@ -1,26 +1,63 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useRef, RefObject } from 'react';
+import { useEffect } from 'react';
+import Header from './Components/Universal/Header';
+import MuiThemeProvider from './Theming/MuiThemeprovider';
+import Links from './Components/Universal/Links';
+import Starter from './Components/Starter/Starter';
+import About from './Components/About/About';
+import Projects from './Components/Projects/Projects';
+import Footer from './Components/Footer/Footer';
+import SchoolCourses from './Components/SchoolCourses/SchoolCourses';
+import Contact from './Components/Contact/Contact';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [windowSize, setWindowSize] = useState(window.outerWidth);
+	const [skillColorMap, setSkillColorMap] = useState<Map<string, string>>(new Map());
+
+	const starterRef = useRef(null);
+	const aboutRef = useRef(null);
+	const projectsRef = useRef(null);
+	const schoolCoursesRef = useRef(null);
+	const contactRef = useRef(null);
+
+	const handleWindowSizeChange = () => {
+		setWindowSize(window.outerWidth);
+	};
+
+	useEffect(() => {
+		// Update the document title using the browser API
+		document.title = `Laurits Bonde`;
+		window.addEventListener('resize', handleWindowSizeChange, { passive: true });
+		return () => {
+			window.removeEventListener('resize', handleWindowSizeChange);
+		};
+	});
+
+	const gotoSegment = (segment: RefObject<HTMLElement>) => {
+		if (segment.current) {
+			window.scrollTo({
+				top: segment.current?.offsetTop - 100, //the header is 100px high
+				behavior: 'smooth',
+				// You can also assign value "auto"
+				// to the behavior parameter.
+			});
+		}
+	};
+
+	const isMobile = windowSize < 700;
+
+	return (
+		<MuiThemeProvider>
+			<Header isMobile={isMobile} gotoSection={gotoSegment} refs={[starterRef, aboutRef, projectsRef, schoolCoursesRef, contactRef]} />
+			<Links isMobile={isMobile} />
+			<Starter isMobile={isMobile} componentRef={starterRef} />
+			<About isMobile={isMobile} colorMap={skillColorMap} setColorMap={(colorMap: Map<string, string>) => setSkillColorMap(colorMap)} componentRef={aboutRef} />
+			<Projects isMobile={isMobile} colorMap={skillColorMap} componentRef={projectsRef} />
+			<SchoolCourses isMobile={isMobile} colorMap={skillColorMap} componentRef={schoolCoursesRef} />
+			<Contact isMobile={isMobile} componentRef={contactRef} />
+			<Footer isMobile={isMobile} />
+		</MuiThemeProvider>
+	);
 }
 
 export default App;
