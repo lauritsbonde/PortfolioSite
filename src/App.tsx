@@ -11,7 +11,8 @@ import SchoolCourses from './Components/SchoolCourses/SchoolCourses';
 import Contact from './Components/Contact/Contact';
 
 function App() {
-	const [windowSize, setWindowSize] = useState(window.outerWidth);
+	const [windowSize, setWindowSize] = useState(window.outerWidth || 1000);
+	console.log('windowSize: ', windowSize);
 	const [skillColorMap, setSkillColorMap] = useState<Map<string, string>>(new Map());
 
 	const starterRef = useRef(null);
