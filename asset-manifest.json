@@ -1,20 +1,21 @@
 {
   "files": {
     "main.css": "/PortfolioSite/static/css/main.c3c64124.css",
-    "main.js": "/PortfolioSite/static/js/main.69a7f831.js",
+    "main.js": "/PortfolioSite/static/js/main.0489dfe9.js",
     "static/js/787.1ed0c42c.chunk.js": "/PortfolioSite/static/js/787.1ed0c42c.chunk.js",
     "static/media/satlasNews.png": "/PortfolioSite/static/media/satlasNews.1e05f66bac33685f4bc1.png",
     "static/media/multiminer.png": "/PortfolioSite/static/media/multiminer.f514a8d8261119936ce8.png",
     "static/media/piEstimation.png": "/PortfolioSite/static/media/piEstimation.99c3b9061af202cdbafe.png",
+    "static/media/Laurits.png": "/PortfolioSite/static/media/Laurits.09a50251b0f2730b6465.png",
     "static/media/sudoku.png": "/PortfolioSite/static/media/sudoku.ce60585b517849f7c781.png",
     "static/media/background.svg": "/PortfolioSite/static/media/background.9d8fe4ca5277e887012c3373f47d157b.svg",
     "index.html": "/PortfolioSite/index.html",
     "main.c3c64124.css.map": "/PortfolioSite/static/css/main.c3c64124.css.map",
-    "main.69a7f831.js.map": "/PortfolioSite/static/js/main.69a7f831.js.map",
+    "main.0489dfe9.js.map": "/PortfolioSite/static/js/main.0489dfe9.js.map",
     "787.1ed0c42c.chunk.js.map": "/PortfolioSite/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c3c64124.css",
-    "static/js/main.69a7f831.js"
+    "static/js/main.0489dfe9.js"
   ]
 }
