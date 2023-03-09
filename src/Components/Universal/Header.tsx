@@ -88,10 +88,10 @@ const Header: FC<HeaderProps> = ({ isMobile, gotoSection, refs }) => {
 
 	const fullSizeMenu = (
 		<Box sx={style.menu}>
-			<HeaderTypography variant="h4" styling={style.menuItem} text="Home" section={refs[0]} />
 			<HeaderTypography variant="h4" styling={style.menuItem} text="About" section={refs[1]} />
 			<HeaderTypography variant="h4" styling={style.menuItem} text="Projects" section={refs[2]} />
-			<HeaderTypography variant="h4" styling={style.menuItem} text="Contact" section={refs[3]} />
+			<HeaderTypography variant="h4" styling={style.menuItem} text="School Courses" section={refs[3]} />
+			<HeaderTypography variant="h4" styling={style.menuItem} text="Contact" section={refs[4]} />
 		</Box>
 	);
 

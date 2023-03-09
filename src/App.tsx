@@ -41,7 +41,7 @@ function App() {
 	const gotoSegment = (segment: RefObject<HTMLElement>) => {
 		if (segment.current) {
 			window.scrollTo({
-				top: segment.current?.offsetTop - 100, //the header is 100px high
+				top: segment.current?.offsetTop - 120, //the header is 100px high
 				behavior: 'smooth',
 				// You can also assign value "auto"
 				// to the behavior parameter.
