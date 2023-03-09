@@ -1,4 +1,4 @@
-import React, { useState, useRef, RefObject } from 'react';
+import React, { useState, useRef, RefObject, useCallback } from 'react';
 import { useEffect } from 'react';
 import Header from './Components/Universal/Header';
 import MuiThemeProvider from './Theming/MuiThemeprovider';
@@ -23,6 +23,10 @@ function App() {
 	const handleWindowSizeChange = () => {
 		setWindowSize(window.outerWidth);
 	};
+
+	const updateColorMap = useCallback((colorMap: Map<string, string>) => {
+		setSkillColorMap(colorMap);
+	}, []);
 
 	useEffect(() => {
 		// Update the document title using the browser API
@@ -51,7 +55,7 @@ function App() {
 			<Header isMobile={isMobile} gotoSection={gotoSegment} refs={[starterRef, aboutRef, projectsRef, schoolCoursesRef, contactRef]} />
 			<Links isMobile={isMobile} />
 			<Starter isMobile={isMobile} componentRef={starterRef} />
-			<About isMobile={isMobile} colorMap={skillColorMap} setColorMap={(colorMap: Map<string, string>) => setSkillColorMap(colorMap)} componentRef={aboutRef} />
+			<About isMobile={isMobile} colorMap={skillColorMap} setColorMap={updateColorMap} componentRef={aboutRef} />
 			<Projects isMobile={isMobile} colorMap={skillColorMap} componentRef={projectsRef} />
 			<SchoolCourses isMobile={isMobile} colorMap={skillColorMap} componentRef={schoolCoursesRef} />
 			<Contact isMobile={isMobile} componentRef={contactRef} />
