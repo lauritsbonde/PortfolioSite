@@ -1,4 +1,4 @@
-import { Avatar, Box, Link, Typography } from '@mui/material';
+import { Box, Link, Typography } from '@mui/material';
 import React, { FC } from 'react';
 
 interface FooterProps {
