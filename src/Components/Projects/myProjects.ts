@@ -1,7 +1,8 @@
-import multiminer from '../../Images/multiminer.png';
 import piEstimation from '../../Images/piEstimation.png';
-import satlasNews from '../../Images/satlasNews.png';
 import sudoku from '../../Images/sudoku.png';
+import emage from '../../Images/emage.png';
+import fetchlytics from '../../Images/fetchlytics.png';
+import loglite from '../../Images/loglite.png';
 
 export interface Project {
 	title: string;
@@ -15,22 +16,31 @@ export interface Project {
 
 const myProjects: Project[] = [
 	{
-		title: 'Multiminer',
-		description: 'An online multiplayer game. The aim of the game is to mine resources, upgrade miner and get more points that the others!',
-		image: multiminer,
-		link: 'https://multiminer.click',
-		github: 'https://github.com/lauritsbonde/MultiMiner',
-		tech: ['React', 'Node.js', 'Express', 'Socket.io', 'TypeScript', 'Auth0', 'Traefik', 'MongoDB', 'Mongoose', 'Docker', 'Vagrant', 'DigitalOcean'],
-		lastUpdated: 'Regular updates 🚧',
+		title: 'LogLite',
+		description: 'A lightweight, easy-to-use, open-source logging app written in GO.',
+		image: loglite,
+		link: 'https://github.com/lauritsbonde/LogLite',
+		github: 'https://github.com/lauritsbonde/LogLite',
+		tech: ['GO', 'HTMX', 'SQLite'],
+		lastUpdated: 'Ongoing',
 	},
 	{
-		title: 'Satlas News',
-		description: 'A news website with a focus on environmental news. The website is built with Next.js and uses Azure functions. It is built from a project description by DHI.',
-		image: satlasNews,
-		link: 'https://satlas-news.dhigroup.com/',
-		github: 'https://github.com/DHI-GRAS/satlas-news',
-		tech: ['Next.js', 'Azure Functions', 'TypeScript', 'Typeorm', 'PostgreSQL'],
-		lastUpdated: '31/05/2022',
+		title: 'Fetchlytics',
+		description: 'A tool to get insights into the network requests made by your applications',
+		image: fetchlytics,
+		link: 'https://fetchlytics.dev/',
+		github: '',
+		tech: ['Next.js', 'TypeScript', 'DaisyUI', 'Vercel', 'Redis', 'MongoDB', 'Mongoose', 'TailwindCSS'],
+		lastUpdated: '20/11/2024',
+	},
+	{
+		title: 'Emage',
+		description: 'Upload an image an see it get remade from emojis!',
+		image: emage,
+		link: 'https://lauritsbonde.github.io/Emage/',
+		github: 'https://github.com/lauritsbonde/Emage',
+		tech: ['React', 'TypeScript', 'Github Actions', 'Github Pages', 'DaisyUI', 'TailwindCSS'],
+		lastUpdated: '11/11/2024',
 	},
 	{
 		title: 'Sudoku Solver (Creater)',

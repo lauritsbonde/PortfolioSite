@@ -1,5 +1,5 @@
-import React, { useState, useRef, RefObject, useCallback } from 'react';
-import { useEffect } from 'react';
+import React, {useState, useRef, RefObject, useCallback} from 'react';
+import {useEffect} from 'react';
 import Header from './Components/Universal/Header';
 import MuiThemeProvider from './Theming/MuiThemeprovider';
 import Links from './Components/Universal/Links';
@@ -12,7 +12,6 @@ import Contact from './Components/Contact/Contact';
 
 function App() {
 	const [windowSize, setWindowSize] = useState(window.outerWidth || 1000);
-	console.log('windowSize: ', windowSize);
 	const [skillColorMap, setSkillColorMap] = useState<Map<string, string>>(new Map());
 
 	const starterRef = useRef(null);
@@ -32,7 +31,7 @@ function App() {
 	useEffect(() => {
 		// Update the document title using the browser API
 		document.title = `Laurits Bonde`;
-		window.addEventListener('resize', handleWindowSizeChange, { passive: true });
+		window.addEventListener('resize', handleWindowSizeChange, {passive: true});
 		return () => {
 			window.removeEventListener('resize', handleWindowSizeChange);
 		};

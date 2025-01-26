@@ -1,5 +1,5 @@
-import React, { FC, RefObject } from 'react';
-import { Box, Typography, Divider } from '@mui/material';
+import React, {FC, RefObject} from 'react';
+import {Box, Typography, Divider} from '@mui/material';
 import SkillContainer from './SkillContainer';
 
 interface AboutProps {
@@ -9,7 +9,7 @@ interface AboutProps {
 	componentRef: RefObject<HTMLDivElement>;
 }
 
-const About: FC<AboutProps> = ({ isMobile, colorMap, setColorMap, componentRef }) => {
+const About: FC<AboutProps> = ({isMobile, colorMap, setColorMap, componentRef}) => {
 	const style = {
 		container: {
 			width: '100vw',
@@ -71,11 +71,12 @@ const About: FC<AboutProps> = ({ isMobile, colorMap, setColorMap, componentRef }
 			</Typography>
 			<Box sx={style.content}>
 				<Box sx={style.side}>
-					<Typography variant="h3" sx={{ ...style.underlined, textDecorationThickness: '3px' }}>
+					<Typography variant="h3" sx={{...style.underlined, textDecorationThickness: '3px'}}>
 						Basic information
 					</Typography>
 					<Typography variant="body1" sx={style.contentText}>
-						I am a 25 year old fullstack developer. Currently studying 6th semester of Computer Science at the IT University of Copenhagen
+						I am a 27 year old fullstack developer. Currently writing my thesis in "Applying swarm and modular robotics in maritime shipping" for my Computer Science degree at the IT
+						University of Copenhagen
 					</Typography>
 					<Typography variant="body1" sx={style.contentText}>
 						I have a passion for learning and creating. I am always looking for new challenges and opportunities to learn and grow.
@@ -89,7 +90,7 @@ const About: FC<AboutProps> = ({ isMobile, colorMap, setColorMap, componentRef }
 				</Box>
 				<Divider sx={isMobile ? style.mobileDivider : style.divider} />
 				<Box sx={style.side}>
-					<Typography variant="h3" sx={{ ...style.underlined, textDecorationThickness: '3px' }}>
+					<Typography variant="h3" sx={{...style.underlined, textDecorationThickness: '3px'}}>
 						Skills
 					</Typography>
 					<SkillContainer isMobile={isMobile} colorMap={colorMap} setColorMap={setColorMap} />

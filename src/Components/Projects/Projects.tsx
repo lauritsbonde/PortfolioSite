@@ -1,5 +1,5 @@
-import { Box, Typography } from '@mui/material';
-import React, { FC, RefObject } from 'react';
+import {Box, Typography} from '@mui/material';
+import React, {FC, RefObject} from 'react';
 import myProjects from './myProjects';
 import ProjectCard from './ProjectCard';
 
@@ -9,20 +9,21 @@ interface ProjectsProps {
 	componentRef: RefObject<HTMLDivElement>;
 }
 
-const Projects: FC<ProjectsProps> = ({ isMobile, colorMap, componentRef }) => {
+const Projects: FC<ProjectsProps> = ({isMobile, colorMap, componentRef}) => {
 	const style = {
 		container: {
 			display: 'flex',
 			flexDirection: 'column',
 			alignItems: 'center',
 			width: '100vw',
-			marginTop: '5vh',
+			marginY: '5vh',
 		},
 		underlined: {
 			textDecoration: 'underline',
 			textDecorationColor: 'orange',
 			textUnderlineOffset: '4px',
 			textDecorationThickness: '4px',
+			mb: '4px',
 		},
 		cardContainer: {
 			display: 'flex',

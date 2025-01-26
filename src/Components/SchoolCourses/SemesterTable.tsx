@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
-import { Box, Typography, Table, TableHead, TableRow, TableCell, TableBody } from '@mui/material';
-import { Semester, Course } from './semesters';
+import React, {FC} from 'react';
+import {Box, Typography, Table, TableHead, TableRow, TableCell, TableBody} from '@mui/material';
+import {Semester, Course} from './semesters';
 import SkillPill from '../About/SkillPill';
 
 interface SemesterTableProps {
@@ -9,7 +9,7 @@ interface SemesterTableProps {
 	colorMap: Map<string, string>;
 }
 
-const SemesterTable: FC<SemesterTableProps> = ({ isMobile, semester, colorMap }) => {
+const SemesterTable: FC<SemesterTableProps> = ({isMobile, semester, colorMap}) => {
 	const style = {
 		container: {
 			width: isMobile ? '95%' : '85%',
@@ -61,27 +61,29 @@ const SemesterTable: FC<SemesterTableProps> = ({ isMobile, semester, colorMap })
 		<Box sx={style.container}>
 			<Table>
 				<TableHead sx={style.tableHead}>
-					<TableRow sx={{ borderBottom: 'none', margin: 0, padding: 0 }}>
-						<TableCell colSpan={3} sx={{ borderBottom: 'none', margin: 0, padding: '.5% 1%' }}>
-							<Typography variant="h4">{semester.name}</Typography>
+					<TableRow sx={{borderBottom: 'none', margin: 0, padding: 0}}>
+						<TableCell colSpan={3} sx={{borderBottom: 'none', margin: 0, padding: '.5% 1%'}}>
+							<Typography variant="h4">
+								{semester.level} - {semester.name}
+							</Typography>
 							<Typography variant="body1">
 								{semester.startDate.toLocaleDateString()} to {semester.endDate.toLocaleDateString()}
 							</Typography>
 						</TableCell>
 					</TableRow>
 					<TableRow sx={style.headerRow}>
-						<TableCell variant="head" sx={{ ...style.courseCell, padding: '1%' }}>
+						<TableCell variant="head" sx={{...style.courseCell, padding: '1%'}}>
 							<Typography variant="h5">Courses</Typography>
 						</TableCell>
-						<TableCell sx={{ ...style.learnedCell, padding: '1%' }}>
+						<TableCell sx={{...style.learnedCell, padding: '1%'}}>
 							<Typography variant="h5">Learned</Typography>
 						</TableCell>
-						<TableCell variant="head" sx={{ ...style.passedCell, padding: '1%' }}>
+						<TableCell variant="head" sx={{...style.passedCell, padding: '1%'}}>
 							<Typography variant="h5">Passed</Typography>
 						</TableCell>
 					</TableRow>
 				</TableHead>
-				<TableBody sx={{ borderBottom: '2px solid lightgrey' }}>
+				<TableBody sx={{borderBottom: '2px solid lightgrey'}}>
 					{semester.courses.map((course: Course, i) => {
 						return (
 							<TableRow key={`${course.id}-${i}`} sx={style.courseRow}>
